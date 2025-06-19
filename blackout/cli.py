@@ -24,11 +24,14 @@ SOFTWARE.
 
 from blackout.core import Blackout
 import argparse
+import os
 
 
 def build_parser():
     parser = argparse.ArgumentParser(
-        description="Blackout: Raw packet network flooder", add_help=False
+        description="Blackout: Raw packet network flooder",
+        epilog="You need root privileges to run this script.",
+        add_help=False,
     )
 
     host = parser.add_argument_group("Target Settings")
@@ -63,6 +66,9 @@ def build_parser():
 def main():
     parser = build_parser()
     args = parser.parse_args()
+
+    if not os.geteuid() == 0:
+        parser.error("you must run this script with root privileges.")
 
     blackout = Blackout()
     blackout.run(target=args.host, port=args.port, flag=args.mode, threads=args.threads)

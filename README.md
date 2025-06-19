@@ -23,7 +23,7 @@
 ```bash
 git clone https://github.com/0xf0xy/Blackout.git
 cd Blackout
-pip install .
+sudo pip install .
 blackout -h
 ```
 
