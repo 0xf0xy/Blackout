@@ -34,9 +34,9 @@ def build_parser():
         add_help=False,
     )
 
-    host = parser.add_argument_group("Target Settings")
-    host.add_argument("host", help="Targe host or IP address")
-    host.add_argument("-p", "--port", default=80, type=int, help="Port to flood")
+    target = parser.add_argument_group("Target Settings")
+    target.add_argument("host", help="Targe host or IP address")
+    target.add_argument("-p", "--port", default=80, type=int, help="Port to flood")
 
     flood = parser.add_argument_group("Flood Settings")
     flood.add_argument(
