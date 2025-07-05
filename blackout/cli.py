@@ -30,7 +30,7 @@ import os
 def build_parser():
     parser = argparse.ArgumentParser(
         description="Blackout: Raw packet network flooder",
-        epilog="You need root privileges to run this script.",
+        epilog="You need root privileges to run this tool.",
         add_help=False,
     )
 
@@ -68,7 +68,7 @@ def main():
     args = parser.parse_args()
 
     if not os.geteuid() == 0:
-        parser.error("you must run this script with root privileges.")
+        parser.error("you must run this tool with root privileges.")
 
     blackout = Blackout()
     blackout.run(target=args.host, port=args.port, flag=args.mode, threads=args.threads)
