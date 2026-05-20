@@ -1,4 +1,5 @@
 <h1 align="center">BLACKOUT</h1>
+
 <p align="center">
   <em>raw packet network flooder</em>
 </p>
@@ -11,37 +12,74 @@
 
 ---
 
-<br>
-
-<br>
-
 ## > Overview
 
-**Blackout** is a raw packet generation engine built for network-layer stress testing and traffic resilience analysis.
+**Blackout** is a raw packet generation engine designed for network-layer stress testing and traffic resilience analysis.
 
-It supports high-volume TCP and UDP packet transmission with randomized IP and port spoofing capabilities, enabling controlled simulation of denial-of-service conditions in authorized environments.
+The project focuses on controlled packet transmission workflows for evaluating infrastructure behavior under high network load conditions.
 
-Designed for infrastructure hardening research, performance evaluation, and protocol-level experimentation.
+Blackout supports:
 
-<br>
+* High-volume TCP packet transmission
+* High-volume UDP packet transmission
+* Randomized IP spoofing
+* Randomized port spoofing
+* Packet-level traffic experimentation
 
-# Installation
+The project was built for:
+
+* Infrastructure hardening research
+* Network resilience evaluation
+* Protocol behavior analysis
+* Controlled traffic simulation environments
+
+---
+
+## > Features
+
+* Raw packet generation
+* TCP flood support
+* UDP flood support
+* IP and port randomization
+* Packet crafting workflows
+
+---
+
+## > Installation
 
 ```bash
 git clone https://github.com/0xf0xy/Blackout.git
 cd Blackout
 sudo pip install .
+```
+
+Verify installation:
+
+```bash
 blackout -h
 ```
 
-<br>
+---
+
+## > Requirements
+
+* Python 3.10+
+* Linux system
+
+---
+
+## > Project Status
+
+Blackout is currently in active development.  
+Features and internal behavior may change as the project evolves.
+
+---
 
 ## > Warning
 
 This project is provided for **educational and research purposes only**.  
-Any misuse is your responsibility.
-
-<br>
+Only use this software in environments you own or are explicitly authorized to test.  
+You are responsible for any misuse of this software.
 
 ---
 
